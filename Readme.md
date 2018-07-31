@@ -6,7 +6,7 @@ API is from [OpenWeatherMap](https://openweathermap.org/).
 
 ## Few words about it...
 After you enter the city name, to check the weather forecast, you will receive weather data for next three days.<br />
-Now you can filter the results depending on the options available.<br />
+Now you can filter the results depending on the options available:<br />
 * **about this hour** - shows the data available for now or on subsequent days at this time;<br />
 * **the maximal weather values** - retrieves values from whole day and returns the highest value;<br />
 * **the minimal weather values** - retrieves values from whole day and returns the lowest value;<br />
