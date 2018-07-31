@@ -7,7 +7,7 @@ This simple app is created in React, I use Webpack.
 ## How to get it up and running
 
 You can:
-* look it up and play here - [GitHub Pages](https://bajako.github.io/weather_forecast_app/). <br /><br />
+* look it up and use it here - [GitHub Pages](https://bajako.github.io/weather_forecast_app/). <br /><br />
 * run it on your local machine.<br /><br />
   To do so - download the project, open a terminal in the folder that contains the project and use command:
   ```
