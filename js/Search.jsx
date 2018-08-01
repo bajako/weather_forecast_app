@@ -1,5 +1,6 @@
 import React from 'react';
 import {DataTracker} from './DataTracker.jsx';
+import {NoSuchCity} from "./NoSuchCity.jsx";
 
 export class Search extends React.Component {
   constructor(props) {
@@ -7,6 +8,7 @@ export class Search extends React.Component {
     this.state = {
       weatherData: '',
       query: null,
+      error: false
     }
   }
 
@@ -20,7 +22,9 @@ export class Search extends React.Component {
       .then(obj => this.setState({
         weatherData: Object.entries(obj)
       }))
-      .catch(err => console.log(err))
+      .catch(err => this.setState({
+        error: true
+      }))
   };
   getWeatherInformation = (event) => {
     event.preventDefault();
@@ -44,8 +48,10 @@ export class Search extends React.Component {
       </form>
     </div>;
 
-
-    if (this.state.query !== null) {
+    if (this.state.error) {
+      return <NoSuchCity />
+    }
+    else if (this.state.query !== null) {
       return <DataTracker weatherData={this.state.weatherData} cityName={this.state.query}/>
     }
     else {

@@ -22760,6 +22760,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _DataTracker = __webpack_require__(187);
 
+var _NoSuchCity = __webpack_require__(191);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22788,7 +22790,9 @@ var Search = exports.Search = function (_React$Component) {
           weatherData: Object.entries(obj)
         });
       }).catch(function (err) {
-        return console.log(err);
+        return _this.setState({
+          error: true
+        });
       });
     };
 
@@ -22802,7 +22806,8 @@ var Search = exports.Search = function (_React$Component) {
 
     _this.state = {
       weatherData: '',
-      query: null
+      query: null,
+      error: false
     };
     return _this;
   }
@@ -22830,7 +22835,9 @@ var Search = exports.Search = function (_React$Component) {
         )
       );
 
-      if (this.state.query !== null) {
+      if (this.state.error) {
+        return _react2.default.createElement(_NoSuchCity.NoSuchCity, null);
+      } else if (this.state.query !== null) {
         return _react2.default.createElement(_DataTracker.DataTracker, { weatherData: this.state.weatherData, cityName: this.state.query });
       } else {
         return _react2.default.createElement(
@@ -22926,7 +22933,7 @@ var DataTracker = exports.DataTracker = function (_React$Component) {
         null,
         _react2.default.createElement(
           'form',
-          { onSubmit: this.returnToMainSite, className: 'newQueryForm ' },
+          { onSubmit: this.returnToMainSite, className: 'newQueryForm' },
           _react2.default.createElement('input', { type: 'submit', value: 'New Query', className: 'newQuery' })
         ),
         _react2.default.createElement(
@@ -23257,6 +23264,80 @@ var DayAfterTomorrow = exports.DayAfterTomorrow = function (_React$Component) {
   }]);
 
   return DayAfterTomorrow;
+}(_react2.default.Component);
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NoSuchCity = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(13);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _index = __webpack_require__(52);
+
+var _index2 = _interopRequireDefault(_index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var NoSuchCity = exports.NoSuchCity = function (_React$Component) {
+  _inherits(NoSuchCity, _React$Component);
+
+  function NoSuchCity(props) {
+    _classCallCheck(this, NoSuchCity);
+
+    var _this = _possibleConstructorReturn(this, (NoSuchCity.__proto__ || Object.getPrototypeOf(NoSuchCity)).call(this, props));
+
+    _this.returnToMainSite = function () {
+      return _react2.default.createElement(_index2.default, null);
+    };
+
+    return _this;
+  }
+
+  _createClass(NoSuchCity, [{
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'form',
+          { onSubmit: this.returnToMainSite, className: 'newQueryForm' },
+          _react2.default.createElement('input', { type: 'submit', value: 'New Query', className: 'newQuery' })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'noSuchCity' },
+          'We couldn\'t find your city. Please try again with new query'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'underline' },
+          ' '
+        )
+      );
+    }
+  }]);
+
+  return NoSuchCity;
 }(_react2.default.Component);
 
 /***/ })

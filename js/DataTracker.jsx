@@ -40,7 +40,7 @@ export class DataTracker extends React.Component {
 
     return (
       <div>
-        <form onSubmit={this.returnToMainSite} className='newQueryForm '>
+        <form onSubmit={this.returnToMainSite} className='newQueryForm'>
           <input type='submit' value='New Query' className='newQuery'/>
         </form>
         <div className='cityName'>{this.props.cityName}</div>
