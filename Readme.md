@@ -25,9 +25,9 @@ You can:
   ```
   npm install
   ```
-  It will install all dependencies (listed in **package.json**) that you need to enjoy the game.
+  It will install all dependencies (listed in **package.json**) that you need to enjoy the Weather Forecast Application.
   
-  Next, if you have your **webpack** installed globaly type:
+  Next, if you have your **webpack** installed globally type:
   ```
   webpack
   ```
