@@ -1,5 +1,4 @@
 import React from "react";
-import App from './index.jsx';
 
 export class NoSuchCity extends React.Component {
   constructor(props) {
@@ -10,9 +9,7 @@ export class NoSuchCity extends React.Component {
     return <App/>;
   };
 
-
   render() {
-
 
     return (
       <div>

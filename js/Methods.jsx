@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const temperature = (receivedWeatherData) => {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
 
     return (
@@ -30,7 +29,6 @@ export const temperature = (receivedWeatherData) => {
 };
 
 export const humidity = (receivedWeatherData) => {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
 
     return (
@@ -59,7 +57,6 @@ export const humidity = (receivedWeatherData) => {
 };
 
 export const wind = (receivedWeatherData) => {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
 
     return (
@@ -88,12 +85,11 @@ export const wind = (receivedWeatherData) => {
 };
 
 export const clouds = (receivedWeatherData) => {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
 
     return (
       <div>
-        <div>Cloudines</div>
+        <div>Cloudiness</div>
         <div><strong>{Math.round(receivedWeatherData.clouds.all * 10) / 10}%</strong></div>
       </div>
     )
@@ -101,7 +97,7 @@ export const clouds = (receivedWeatherData) => {
   else if (typeof receivedWeatherData === 'string') {
     return (
       <div>
-        <div>Cloudines</div>
+        <div>Cloudiness</div>
         <div><strong>{receivedWeatherData}</strong></div>
       </div>
     );
@@ -109,15 +105,14 @@ export const clouds = (receivedWeatherData) => {
   else if (receivedWeatherData !== undefined) {
     return (
       <div>
-        <div>Cloudines</div>
+        <div>Cloudiness</div>
         <div><strong>{receivedWeatherData}%</strong></div>
       </div>
     );
   }
 };
 
-export const filtrWind = (weatherDataForMaxMinMeanModeValues, value) => {
-
+export const filterWind = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     const windSpeed = [];
@@ -141,8 +136,7 @@ export const filtrWind = (weatherDataForMaxMinMeanModeValues, value) => {
 };
 
 
-export const filtrTemperature = (weatherDataForMaxMinMeanModeValues, value) => {
-
+export const filterTemperature = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     const temperature = [];
@@ -165,8 +159,7 @@ export const filtrTemperature = (weatherDataForMaxMinMeanModeValues, value) => {
   }
 };
 
-export const filtrHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
-
+export const filterHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     const humidity = [];
@@ -189,26 +182,25 @@ export const filtrHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
   }
 };
 
-export const filtrClouds = (weatherDataForMaxMinMeanModeValues, value) => {
-
+export const filterClouds = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
-    const cloudines = [];
+    const cloudiness = [];
 
     weatherDataForMaxMinMeanModeValues.forEach(function (element) {
-      cloudines.push(element.clouds.all);
+      cloudiness.push(element.clouds.all);
     });
 
-    cloudines.sort((a, b) => b - a);
+    cloudiness.sort((a, b) => b - a);
 
     if (value === 'max') {
-      return showMax(cloudines);
+      return showMax(cloudiness);
     } else if (value === 'min') {
-      return showMin(cloudines);
+      return showMin(cloudiness);
     } else if (value === 'mean') {
-      return showMean(cloudines);
+      return showMean(cloudiness);
     } else if (value === 'mode') {
-      return showMode(cloudines);
+      return showMode(cloudiness);
     }
   }
 };
@@ -236,13 +228,11 @@ export const showMean = (weatherDataFromWholeDay) => {
     return Math.round(weatherDataFromWholeDay[0] * 10) / 10
   }
   else {
-    return Math.round(weatherDataFromWholeDay.reduce((a, b) => a + b)) / weatherDataFromWholeDay.length * 10 / 10
+    return parseFloat((weatherDataFromWholeDay.reduce((a, b) => a + b)/weatherDataFromWholeDay.length).toFixed(2))
   }
 };
 
-
 export const showMode = (weatherDataFromWholeDay) => {
-
   const roundedData = weatherDataFromWholeDay.map(x => Math.round(x));
   const message = 'I\'m sorry but there  aren\'t frequent values';
   const frequency = {};

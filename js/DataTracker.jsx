@@ -12,7 +12,6 @@ export class DataTracker extends React.Component {
 
   returnToMainSite = () => {
     return <App/>;
-
   };
 
   getWeatherDataForAboutThisHour = (weatherData, day) => {
@@ -27,7 +26,6 @@ export class DataTracker extends React.Component {
     if (Array.isArray(weatherData)) {
 
       const today = new Date(weatherData[3][1][day].dt_txt).getDate();
-
 
       return weatherData[3][1].filter(checkDate => new Date(checkDate.dt_txt).getDate() === today && new Date(checkDate.dt_txt).getHours() > 8);
     }

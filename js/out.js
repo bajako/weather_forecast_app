@@ -1504,6 +1504,16 @@ module.exports = ReactUpdates;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+module.exports = __webpack_require__(17);
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -1773,16 +1783,6 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
   }
 }
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(17);
-
 
 /***/ }),
 /* 14 */
@@ -3358,7 +3358,7 @@ module.exports = EventPluginHub;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 var getEventTarget = __webpack_require__(37);
 
@@ -4635,18 +4635,17 @@ module.exports = ReactBrowserEventEmitter;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.showMode = exports.showMean = exports.showMin = exports.showMax = exports.filtrClouds = exports.filtrHumidity = exports.filtrTemperature = exports.filtrWind = exports.clouds = exports.wind = exports.humidity = exports.temperature = undefined;
+exports.showMode = exports.showMean = exports.showMin = exports.showMax = exports.filterClouds = exports.filterHumidity = exports.filterTemperature = exports.filterWind = exports.clouds = exports.wind = exports.humidity = exports.temperature = undefined;
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var temperature = exports.temperature = function temperature(receivedWeatherData) {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'undefined' ? 'undefined' : _typeof(receivedWeatherData)) === "object") {
 
     return _react2.default.createElement(
@@ -4711,7 +4710,6 @@ var temperature = exports.temperature = function temperature(receivedWeatherData
 };
 
 var humidity = exports.humidity = function humidity(receivedWeatherData) {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'undefined' ? 'undefined' : _typeof(receivedWeatherData)) === "object") {
 
     return _react2.default.createElement(
@@ -4776,7 +4774,6 @@ var humidity = exports.humidity = function humidity(receivedWeatherData) {
 };
 
 var wind = exports.wind = function wind(receivedWeatherData) {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'undefined' ? 'undefined' : _typeof(receivedWeatherData)) === "object") {
 
     return _react2.default.createElement(
@@ -4841,7 +4838,6 @@ var wind = exports.wind = function wind(receivedWeatherData) {
 };
 
 var clouds = exports.clouds = function clouds(receivedWeatherData) {
-
   if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'undefined' ? 'undefined' : _typeof(receivedWeatherData)) === "object") {
 
     return _react2.default.createElement(
@@ -4850,7 +4846,7 @@ var clouds = exports.clouds = function clouds(receivedWeatherData) {
       _react2.default.createElement(
         'div',
         null,
-        'Cloudines'
+        'Cloudiness'
       ),
       _react2.default.createElement(
         'div',
@@ -4870,7 +4866,7 @@ var clouds = exports.clouds = function clouds(receivedWeatherData) {
       _react2.default.createElement(
         'div',
         null,
-        'Cloudines'
+        'Cloudiness'
       ),
       _react2.default.createElement(
         'div',
@@ -4889,7 +4885,7 @@ var clouds = exports.clouds = function clouds(receivedWeatherData) {
       _react2.default.createElement(
         'div',
         null,
-        'Cloudines'
+        'Cloudiness'
       ),
       _react2.default.createElement(
         'div',
@@ -4905,8 +4901,7 @@ var clouds = exports.clouds = function clouds(receivedWeatherData) {
   }
 };
 
-var filtrWind = exports.filtrWind = function filtrWind(weatherDataForMaxMinMeanModeValues, value) {
-
+var filterWind = exports.filterWind = function filterWind(weatherDataForMaxMinMeanModeValues, value) {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     var windSpeed = [];
@@ -4931,8 +4926,7 @@ var filtrWind = exports.filtrWind = function filtrWind(weatherDataForMaxMinMeanM
   }
 };
 
-var filtrTemperature = exports.filtrTemperature = function filtrTemperature(weatherDataForMaxMinMeanModeValues, value) {
-
+var filterTemperature = exports.filterTemperature = function filterTemperature(weatherDataForMaxMinMeanModeValues, value) {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     var _temperature = [];
@@ -4957,8 +4951,7 @@ var filtrTemperature = exports.filtrTemperature = function filtrTemperature(weat
   }
 };
 
-var filtrHumidity = exports.filtrHumidity = function filtrHumidity(weatherDataForMaxMinMeanModeValues, value) {
-
+var filterHumidity = exports.filterHumidity = function filterHumidity(weatherDataForMaxMinMeanModeValues, value) {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
     var _humidity = [];
@@ -4983,28 +4976,27 @@ var filtrHumidity = exports.filtrHumidity = function filtrHumidity(weatherDataFo
   }
 };
 
-var filtrClouds = exports.filtrClouds = function filtrClouds(weatherDataForMaxMinMeanModeValues, value) {
-
+var filterClouds = exports.filterClouds = function filterClouds(weatherDataForMaxMinMeanModeValues, value) {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
 
-    var cloudines = [];
+    var cloudiness = [];
 
     weatherDataForMaxMinMeanModeValues.forEach(function (element) {
-      cloudines.push(element.clouds.all);
+      cloudiness.push(element.clouds.all);
     });
 
-    cloudines.sort(function (a, b) {
+    cloudiness.sort(function (a, b) {
       return b - a;
     });
 
     if (value === 'max') {
-      return showMax(cloudines);
+      return showMax(cloudiness);
     } else if (value === 'min') {
-      return showMin(cloudines);
+      return showMin(cloudiness);
     } else if (value === 'mean') {
-      return showMean(cloudines);
+      return showMean(cloudiness);
     } else if (value === 'mode') {
-      return showMode(cloudines);
+      return showMode(cloudiness);
     }
   }
 };
@@ -5029,14 +5021,13 @@ var showMean = exports.showMean = function showMean(weatherDataFromWholeDay) {
   if (weatherDataFromWholeDay.length <= 1) {
     return Math.round(weatherDataFromWholeDay[0] * 10) / 10;
   } else {
-    return Math.round(weatherDataFromWholeDay.reduce(function (a, b) {
+    return parseFloat((weatherDataFromWholeDay.reduce(function (a, b) {
       return a + b;
-    })) / weatherDataFromWholeDay.length * 10 / 10;
+    }) / weatherDataFromWholeDay.length).toFixed(2));
   }
 };
 
 var showMode = exports.showMode = function showMode(weatherDataFromWholeDay) {
-
   var roundedData = weatherDataFromWholeDay.map(function (x) {
     return Math.round(x);
   });
@@ -6922,7 +6913,7 @@ exports.DayTemplate = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -6944,19 +6935,19 @@ var DayTemplate = exports.DayTemplate = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (DayTemplate.__proto__ || Object.getPrototypeOf(DayTemplate)).call(this, props));
 
-    _this.setStateWithPickedValue = function (event) {
+    _this.setStateWithSelectedValue = function (event) {
       if (event !== undefined) {
         event.preventDefault();
-        _this.setState({ pickValue: event.target.value });
+        _this.setState({ selectValue: event.target.value });
       }
     };
 
-    _this.sendPickedValueToParent = function () {
-      _this.props.setStateWithDataFromChild(_this.state.pickValue);
+    _this.sendSelectedValueToParent = function () {
+      _this.props.setStateWithDataFromChild(_this.state.selectValue);
     };
 
     _this.state = {
-      pickValue: ''
+      selectValue: ''
     };
     return _this;
   }
@@ -6990,14 +6981,14 @@ var DayTemplate = exports.DayTemplate = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'weatherValues' },
-          (0, _Methods.clouds)(this.props.cloudinesValue)
+          (0, _Methods.clouds)(this.props.cloudinessValue)
         ),
         _react2.default.createElement(
           'select',
           {
-            value: this.state.pickValue,
-            onChange: this.setStateWithPickedValue,
-            onClick: this.sendPickedValueToParent },
+            value: this.state.selectValue,
+            onChange: this.setStateWithSelectedValue,
+            onClick: this.sendSelectedValueToParent },
           _react2.default.createElement(
             'option',
             { value: 'now' },
@@ -7038,7 +7029,7 @@ var DayTemplate = exports.DayTemplate = function (_React$Component) {
 "use strict";
 
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -13535,7 +13526,7 @@ module.exports = FallbackCompositionState;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 /**
  * @interface Event
@@ -13574,7 +13565,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 /**
  * @interface Event
@@ -13619,7 +13610,7 @@ var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 var inputValueTracking = __webpack_require__(66);
 var getEventTarget = __webpack_require__(37);
@@ -21312,7 +21303,7 @@ var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInputSelection = __webpack_require__(81);
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 var getActiveElement = __webpack_require__(82);
 var isTextInputElement = __webpack_require__(67);
@@ -21507,7 +21498,7 @@ var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
 var SyntheticAnimationEvent = __webpack_require__(167);
 var SyntheticClipboardEvent = __webpack_require__(168);
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 var SyntheticFocusEvent = __webpack_require__(169);
 var SyntheticKeyboardEvent = __webpack_require__(170);
 var SyntheticMouseEvent = __webpack_require__(29);
@@ -21729,7 +21720,7 @@ module.exports = SimpleEventPlugin;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 /**
  * @interface Event
@@ -21771,7 +21762,7 @@ module.exports = SyntheticAnimationEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 /**
  * @interface Event
@@ -22140,7 +22131,7 @@ module.exports = SyntheticTouchEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(12);
+var SyntheticEvent = __webpack_require__(13);
 
 /**
  * @interface Event
@@ -22754,7 +22745,7 @@ exports.Search = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -22789,7 +22780,7 @@ var Search = exports.Search = function (_React$Component) {
         return _this.setState({
           weatherData: Object.entries(obj)
         });
-      }).catch(function (err) {
+      }).catch(function (error) {
         return _this.setState({
           error: true
         });
@@ -22866,7 +22857,7 @@ exports.DataTracker = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -22979,7 +22970,7 @@ exports.Today = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23004,7 +22995,7 @@ var Today = exports.Today = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Today.__proto__ || Object.getPrototypeOf(Today)).call(this, props));
 
     _this.setStateWithDataFromChild = function (dataFromChild) {
-      _this.setState({ pickValue: dataFromChild });
+      _this.setState({ selectValue: dataFromChild });
     };
 
     _this.state = {
@@ -23019,45 +23010,45 @@ var Today = exports.Today = function (_React$Component) {
 
       var today = 'Today';
 
-      var minWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
 
-      var minHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
 
-      var minCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'min');
-      var maxCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'max');
-      var meanCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mean');
-      var modeCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
 
-      if (this.state.pickValue === 'max') {
+      if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
-          cloudinesValue: maxCloudinesValue, thisDay: today,
+          cloudinessValue: maxCloudinessValue, thisDay: today,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'min') {
+      } else if (this.state.selectValue === 'min') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: minTemperatureValue, humidityValue: minHumidityValue, windSpeed: minWindSpeed,
-          cloudinesValue: minCloudinesValue, thisDay: today,
+          cloudinessValue: minCloudinessValue, thisDay: today,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mean') {
+      } else if (this.state.selectValue === 'mean') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: meanTemperatureValue, humidityValue: meanHumidityValue, windSpeed: meanWindSpeed,
-          cloudinesValue: meanCloudinesValue, thisDay: today,
+          cloudinessValue: meanCloudinessValue, thisDay: today,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mode') {
+      } else if (this.state.selectValue === 'mode') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: modeTemperatureValue, humidityValue: modeHumidityValue, windSpeed: modeWindSpeed,
-          cloudinesValue: modeCloudinesValue, thisDay: today,
+          cloudinessValue: modeCloudinessValue, thisDay: today,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
       }
       return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: this.props.today, humidityValue: this.props.today, windSpeed: this.props.today,
-        cloudinesValue: this.props.today, thisDay: today,
+        cloudinessValue: this.props.today, thisDay: today,
         setStateWithDataFromChild: this.setStateWithDataFromChild });
     }
   }]);
@@ -23079,7 +23070,7 @@ exports.Tomorrow = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23104,7 +23095,7 @@ var Tomorrow = exports.Tomorrow = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Tomorrow.__proto__ || Object.getPrototypeOf(Tomorrow)).call(this, props));
 
     _this.setStateWithDataFromChild = function (dataFromChild) {
-      _this.setState({ pickValue: dataFromChild });
+      _this.setState({ selectValue: dataFromChild });
     };
 
     _this.state = {
@@ -23119,45 +23110,45 @@ var Tomorrow = exports.Tomorrow = function (_React$Component) {
 
       var tomorrow = 'Tomorrow';
 
-      var minWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
 
-      var minHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
 
-      var minCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'min');
-      var maxCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'max');
-      var meanCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mean');
-      var modeCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
 
-      if (this.state.pickValue === 'max') {
+      if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
-          cloudinesValue: maxCloudinesValue, thisDay: tomorrow,
+          cloudinessValue: maxCloudinessValue, thisDay: tomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'min') {
+      } else if (this.state.selectValue === 'min') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: minTemperatureValue, humidityValue: minHumidityValue, windSpeed: minWindSpeed,
-          cloudinesValue: minCloudinesValue, thisDay: tomorrow,
+          cloudinessValue: minCloudinessValue, thisDay: tomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mean') {
+      } else if (this.state.selectValue === 'mean') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: meanTemperatureValue, humidityValue: meanHumidityValue, windSpeed: meanWindSpeed,
-          cloudinesValue: meanCloudinesValue, thisDay: tomorrow,
+          cloudinessValue: meanCloudinessValue, thisDay: tomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mode') {
+      } else if (this.state.selectValue === 'mode') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: modeTemperatureValue, humidityValue: modeHumidityValue, windSpeed: modeWindSpeed,
-          cloudinesValue: modeCloudinesValue, thisDay: tomorrow,
+          cloudinessValue: modeCloudinessValue, thisDay: tomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
       }
       return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: this.props.tomorrow, humidityValue: this.props.tomorrow,
-        windSpeed: this.props.tomorrow, cloudinesValue: this.props.tomorrow, thisDay: tomorrow,
+        windSpeed: this.props.tomorrow, cloudinessValue: this.props.tomorrow, thisDay: tomorrow,
         setStateWithDataFromChild: this.setStateWithDataFromChild });
     }
   }]);
@@ -23179,7 +23170,7 @@ exports.DayAfterTomorrow = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -23204,7 +23195,7 @@ var DayAfterTomorrow = exports.DayAfterTomorrow = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (DayAfterTomorrow.__proto__ || Object.getPrototypeOf(DayAfterTomorrow)).call(this, props));
 
     _this.setStateWithDataFromChild = function (dataFromChild) {
-      _this.setState({ pickValue: dataFromChild });
+      _this.setState({ selectValue: dataFromChild });
     };
 
     _this.state = {
@@ -23219,45 +23210,45 @@ var DayAfterTomorrow = exports.DayAfterTomorrow = function (_React$Component) {
 
       var dayAfterTomorrow = 'Day After Tomorrow';
 
-      var minWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filtrWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filtrTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
 
-      var minHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filtrHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
 
-      var minCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'min');
-      var maxCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'max');
-      var meanCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mean');
-      var modeCloudinesValue = (0, _Methods.filtrClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
 
-      if (this.state.pickValue === 'max') {
+      if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
-          cloudinesValue: maxCloudinesValue, thisDay: dayAfterTomorrow,
+          cloudinessValue: maxCloudinessValue, thisDay: dayAfterTomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'min') {
+      } else if (this.state.selectValue === 'min') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: minTemperatureValue, humidityValue: minHumidityValue, windSpeed: minWindSpeed,
-          cloudinesValue: minCloudinesValue, thisDay: dayAfterTomorrow,
+          cloudinessValue: minCloudinessValue, thisDay: dayAfterTomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mean') {
+      } else if (this.state.selectValue === 'mean') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: meanTemperatureValue, humidityValue: meanHumidityValue, windSpeed: meanWindSpeed,
-          cloudinesValue: meanCloudinesValue, thisDay: dayAfterTomorrow,
+          cloudinessValue: meanCloudinessValue, thisDay: dayAfterTomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
-      } else if (this.state.pickValue === 'mode') {
+      } else if (this.state.selectValue === 'mode') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: modeTemperatureValue, humidityValue: modeHumidityValue, windSpeed: modeWindSpeed,
-          cloudinesValue: modeCloudinesValue, thisDay: dayAfterTomorrow,
+          cloudinessValue: modeCloudinessValue, thisDay: dayAfterTomorrow,
           setStateWithDataFromChild: this.setStateWithDataFromChild });
       }
       return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: this.props.dayAfterTomorrow, humidityValue: this.props.dayAfterTomorrow,
-        windSpeed: this.props.dayAfterTomorrow, cloudinesValue: this.props.dayAfterTomorrow,
+        windSpeed: this.props.dayAfterTomorrow, cloudinessValue: this.props.dayAfterTomorrow,
         thisDay: dayAfterTomorrow,
         setStateWithDataFromChild: this.setStateWithDataFromChild });
     }
@@ -23280,13 +23271,9 @@ exports.NoSuchCity = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(13);
+var _react = __webpack_require__(12);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _index = __webpack_require__(52);
-
-var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23295,6 +23282,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// import App from './index.jsx';
 
 var NoSuchCity = exports.NoSuchCity = function (_React$Component) {
   _inherits(NoSuchCity, _React$Component);
@@ -23305,7 +23294,7 @@ var NoSuchCity = exports.NoSuchCity = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (NoSuchCity.__proto__ || Object.getPrototypeOf(NoSuchCity)).call(this, props));
 
     _this.returnToMainSite = function () {
-      return _react2.default.createElement(_index2.default, null);
+      return _react2.default.createElement(App, null);
     };
 
     return _this;

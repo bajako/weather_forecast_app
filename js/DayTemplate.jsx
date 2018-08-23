@@ -6,21 +6,20 @@ export class DayTemplate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pickValue:'',
+      selectValue:'',
     }
   }
 
-  setStateWithPickedValue = (event) => {
+  setStateWithSelectedValue = (event) => {
     if (event !== undefined) {
       event.preventDefault();
-      this.setState({pickValue: event.target.value});
+      this.setState({selectValue: event.target.value});
     }
   };
 
-  sendPickedValueToParent = () => {
-    this.props.setStateWithDataFromChild(this.state.pickValue);
+  sendSelectedValueToParent = () => {
+    this.props.setStateWithDataFromChild(this.state.selectValue);
   };
-
 
   render(){
     return(
@@ -29,11 +28,11 @@ export class DayTemplate extends React.Component {
         <div className="weatherValues">{temperature(this.props.temperatureValue)}</div>
         <div className="weatherValues">{humidity(this.props.humidityValue)}</div>
         <div className="weatherValues">{wind(this.props.windSpeed)}</div>
-        <div className="weatherValues">{clouds(this.props.cloudinesValue)}</div>
+        <div className="weatherValues">{clouds(this.props.cloudinessValue)}</div>
         <select
-          value={this.state.pickValue}
-          onChange={this.setStateWithPickedValue}
-          onClick={this.sendPickedValueToParent}>
+          value={this.state.selectValue}
+          onChange={this.setStateWithSelectedValue}
+          onClick={this.sendSelectedValueToParent}>
           <option value='now'>about this hour</option>
           <option value='max'>the maximal weather values</option>
           <option value='min'>the minimal weather values</option>

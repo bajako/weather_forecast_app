@@ -22,7 +22,7 @@ export class Search extends React.Component {
       .then(obj => this.setState({
         weatherData: Object.entries(obj)
       }))
-      .catch(err => this.setState({
+      .catch(error => this.setState({
         error: true
       }))
   };
@@ -59,4 +59,3 @@ export class Search extends React.Component {
     }
   }
 }
-

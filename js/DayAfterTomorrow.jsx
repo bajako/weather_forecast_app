@@ -1,5 +1,5 @@
 import React from 'react';
-import {filtrWind, filtrTemperature, filtrHumidity, filtrClouds} from './Methods.jsx';
+import {filterWind, filterTemperature, filterHumidity, filterClouds} from './Methods.jsx';
 import {DayTemplate} from './DayTemplate.jsx';
 
 
@@ -12,7 +12,7 @@ export class DayAfterTomorrow extends React.Component {
   }
 
   setStateWithDataFromChild = (dataFromChild) => {
-    this.setState({pickValue: dataFromChild});
+    this.setState({selectValue: dataFromChild});
   };
 
 
@@ -20,62 +20,62 @@ export class DayAfterTomorrow extends React.Component {
 
     const dayAfterTomorrow = 'Day After Tomorrow';
 
-    const minWindSpeed = filtrWind(this.props.obiekt, 'min');
-    const maxWindSpeed = filtrWind(this.props.obiekt, 'max');
-    const meanWindSpeed = filtrWind(this.props.obiekt, 'mean');
-    const modeWindSpeed = filtrWind(this.props.obiekt, 'mode');
+    const minWindSpeed = filterWind(this.props.obiekt, 'min');
+    const maxWindSpeed = filterWind(this.props.obiekt, 'max');
+    const meanWindSpeed = filterWind(this.props.obiekt, 'mean');
+    const modeWindSpeed = filterWind(this.props.obiekt, 'mode');
 
-    const minTemperatureValue = filtrTemperature(this.props.obiekt, 'min');
-    const maxTemperatureValue = filtrTemperature(this.props.obiekt, 'max');
-    const meanTemperatureValue = filtrTemperature(this.props.obiekt, 'mean');
-    const modeTemperatureValue = filtrTemperature(this.props.obiekt, 'mode');
+    const minTemperatureValue = filterTemperature(this.props.obiekt, 'min');
+    const maxTemperatureValue = filterTemperature(this.props.obiekt, 'max');
+    const meanTemperatureValue = filterTemperature(this.props.obiekt, 'mean');
+    const modeTemperatureValue = filterTemperature(this.props.obiekt, 'mode');
 
-    const minHumidityValue = filtrHumidity(this.props.obiekt, 'min');
-    const maxHumidityValue = filtrHumidity(this.props.obiekt, 'max');
-    const meanHumidityValue = filtrHumidity(this.props.obiekt, 'mean');
-    const modeHumidityValue = filtrHumidity(this.props.obiekt, 'mode');
+    const minHumidityValue = filterHumidity(this.props.obiekt, 'min');
+    const maxHumidityValue = filterHumidity(this.props.obiekt, 'max');
+    const meanHumidityValue = filterHumidity(this.props.obiekt, 'mean');
+    const modeHumidityValue = filterHumidity(this.props.obiekt, 'mode');
 
-    const minCloudinesValue = filtrClouds(this.props.obiekt, 'min');
-    const maxCloudinesValue = filtrClouds(this.props.obiekt, 'max');
-    const meanCloudinesValue = filtrClouds(this.props.obiekt, 'mean');
-    const modeCloudinesValue = filtrClouds(this.props.obiekt, 'mode');
+    const minCloudinessValue = filterClouds(this.props.obiekt, 'min');
+    const maxCloudinessValue = filterClouds(this.props.obiekt, 'max');
+    const meanCloudinessValue = filterClouds(this.props.obiekt, 'mean');
+    const modeCloudinessValue = filterClouds(this.props.obiekt, 'mode');
 
 
-    if (this.state.pickValue === 'max') {
+    if (this.state.selectValue === 'max') {
       return (
         <DayTemplate temperatureValue={maxTemperatureValue} humidityValue={maxHumidityValue} windSpeed={maxWindSpeed}
-                     cloudinesValue={maxCloudinesValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={maxCloudinessValue} thisDay={dayAfterTomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       )
     }
-    else if (this.state.pickValue === 'min') {
+    else if (this.state.selectValue === 'min') {
       return (
         <DayTemplate temperatureValue={minTemperatureValue} humidityValue={minHumidityValue} windSpeed={minWindSpeed}
-                     cloudinesValue={minCloudinesValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={minCloudinessValue} thisDay={dayAfterTomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       )
     }
-    else if (this.state.pickValue === 'mean') {
+    else if (this.state.selectValue === 'mean') {
       return (
         <DayTemplate temperatureValue={meanTemperatureValue} humidityValue={meanHumidityValue} windSpeed={meanWindSpeed}
-                     cloudinesValue={meanCloudinesValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={meanCloudinessValue} thisDay={dayAfterTomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       )
     }
-    else if (this.state.pickValue === 'mode') {
+    else if (this.state.selectValue === 'mode') {
       return (
         <DayTemplate temperatureValue={modeTemperatureValue} humidityValue={modeHumidityValue} windSpeed={modeWindSpeed}
-                     cloudinesValue={modeCloudinesValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={modeCloudinessValue} thisDay={dayAfterTomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       )
     }
     return (
       <DayTemplate temperatureValue={this.props.dayAfterTomorrow} humidityValue={this.props.dayAfterTomorrow}
-                   windSpeed={this.props.dayAfterTomorrow} cloudinesValue={this.props.dayAfterTomorrow}
+                   windSpeed={this.props.dayAfterTomorrow} cloudinessValue={this.props.dayAfterTomorrow}
                    thisDay={dayAfterTomorrow}
                    setStateWithDataFromChild={this.setStateWithDataFromChild}/>
     )
