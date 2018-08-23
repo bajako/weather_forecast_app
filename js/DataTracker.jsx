@@ -2,7 +2,6 @@ import React from 'react';
 import {Today} from './Today.jsx';
 import {Tomorrow} from './Tomorrow.jsx';
 import {DayAfterTomorrow} from './DayAfterTomorrow.jsx';
-import App from './index.jsx';
 
 
 export class DataTracker extends React.Component {
@@ -45,13 +44,13 @@ export class DataTracker extends React.Component {
         <div className='underline'> </div>
         <div className='container'>
           <Today today={this.getWeatherDataForAboutThisHour(weatherData, 0)}
-                 obiekt={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 0)}
+                 wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 0)}
                  className='threeDays'/>
           <Tomorrow tomorrow={this.getWeatherDataForAboutThisHour(weatherData, 8)}
-                    obiekt={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 8)}
+                    wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 8)}
                     className='threeDays'/>
           <DayAfterTomorrow dayAfterTomorrow={this.getWeatherDataForAboutThisHour(weatherData, 16)}
-                            obiekt={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 16)} className='threeDays'/>
+                            wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 16)} className='threeDays'/>
         </div>
       </div>
     )

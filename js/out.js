@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 52);
+/******/ 	return __webpack_require__(__webpack_require__.s = 84);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -539,7 +539,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 var _prodInvariant = __webpack_require__(3);
 
 var DOMProperty = __webpack_require__(14);
-var ReactDOMComponentFlags = __webpack_require__(60);
+var ReactDOMComponentFlags = __webpack_require__(59);
 
 var invariant = __webpack_require__(1);
 
@@ -1262,9 +1262,9 @@ module.exports = ReactCurrentOwner;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(64);
+var CallbackQueue = __webpack_require__(63);
 var PooledClass = __webpack_require__(16);
-var ReactFeatureFlags = __webpack_require__(65);
+var ReactFeatureFlags = __webpack_require__(64);
 var ReactReconciler = __webpack_require__(19);
 var Transaction = __webpack_require__(28);
 
@@ -2020,7 +2020,7 @@ var warning = __webpack_require__(2);
 var canDefineProperty = __webpack_require__(25);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(55);
+var REACT_ELEMENT_TYPE = __webpack_require__(54);
 
 var RESERVED_PROPS = {
   key: true,
@@ -2475,7 +2475,7 @@ module.exports = PooledClass;
 
 var _assign = __webpack_require__(4);
 
-var ReactBaseClasses = __webpack_require__(53);
+var ReactBaseClasses = __webpack_require__(52);
 var ReactChildren = __webpack_require__(85);
 var ReactDOMFactories = __webpack_require__(89);
 var ReactElement = __webpack_require__(15);
@@ -2492,7 +2492,7 @@ var cloneElement = ReactElement.cloneElement;
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(34);
   var canDefineProperty = __webpack_require__(25);
-  var ReactElementValidator = __webpack_require__(57);
+  var ReactElementValidator = __webpack_require__(56);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -2825,7 +2825,7 @@ var DOMNamespaces = __webpack_require__(41);
 var setInnerHTML = __webpack_require__(30);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(42);
-var setTextContent = __webpack_require__(69);
+var setTextContent = __webpack_require__(68);
 
 var ELEMENT_NODE_TYPE = 1;
 var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -2945,8 +2945,8 @@ module.exports = DOMLazyTree;
 var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(35);
 
-var accumulateInto = __webpack_require__(61);
-var forEachAccumulated = __webpack_require__(62);
+var accumulateInto = __webpack_require__(60);
+var forEachAccumulated = __webpack_require__(61);
 var warning = __webpack_require__(2);
 
 var getListener = EventPluginHub.getListener;
@@ -3086,8 +3086,8 @@ var EventPluginRegistry = __webpack_require__(27);
 var EventPluginUtils = __webpack_require__(35);
 var ReactErrorUtils = __webpack_require__(36);
 
-var accumulateInto = __webpack_require__(61);
-var forEachAccumulated = __webpack_require__(62);
+var accumulateInto = __webpack_require__(60);
+var forEachAccumulated = __webpack_require__(61);
 var invariant = __webpack_require__(1);
 
 /**
@@ -4013,7 +4013,7 @@ module.exports = TransactionImpl;
 
 
 var SyntheticUIEvent = __webpack_require__(23);
-var ViewportMetrics = __webpack_require__(68);
+var ViewportMetrics = __webpack_require__(67);
 
 var getEventModifierState = __webpack_require__(39);
 
@@ -4317,7 +4317,7 @@ var _assign = __webpack_require__(4);
 
 var EventPluginRegistry = __webpack_require__(27);
 var ReactEventEmitterMixin = __webpack_require__(135);
-var ViewportMetrics = __webpack_require__(68);
+var ViewportMetrics = __webpack_require__(67);
 
 var getVendorPrefixedEventName = __webpack_require__(136);
 var isEventSupported = __webpack_require__(38);
@@ -5599,7 +5599,7 @@ var ReactInstrumentation = __webpack_require__(8);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(42);
 var setInnerHTML = __webpack_require__(30);
-var setTextContent = __webpack_require__(69);
+var setTextContent = __webpack_require__(68);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -5882,8 +5882,8 @@ module.exports = createMicrosoftUnsafeLocalFunction;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypesSecret = __webpack_require__(73);
-var propTypesFactory = __webpack_require__(58);
+var ReactPropTypesSecret = __webpack_require__(72);
+var propTypesFactory = __webpack_require__(57);
 
 var React = __webpack_require__(17);
 var PropTypes = propTypesFactory(React.isValidElement);
@@ -7027,33 +7027,6 @@ var DayTemplate = exports.DayTemplate = function (_React$Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
-
-var _react = __webpack_require__(12);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(100);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Search = __webpack_require__(186);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App() {
-  return _react2.default.createElement(_Search.Search, null);
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-  _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
-});
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -7067,7 +7040,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var _prodInvariant = __webpack_require__(18),
     _assign = __webpack_require__(4);
 
-var ReactNoopUpdateQueue = __webpack_require__(54);
+var ReactNoopUpdateQueue = __webpack_require__(53);
 
 var canDefineProperty = __webpack_require__(25);
 var emptyObject = __webpack_require__(26);
@@ -7197,7 +7170,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7296,7 +7269,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7319,7 +7292,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7363,7 +7336,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7391,7 +7364,7 @@ var ReactElement = __webpack_require__(15);
 var checkReactTypeSpec = __webpack_require__(90);
 
 var canDefineProperty = __webpack_require__(25);
-var getIteratorFn = __webpack_require__(56);
+var getIteratorFn = __webpack_require__(55);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(34);
 
@@ -7622,7 +7595,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7648,7 +7621,7 @@ module.exports = function(isValidElement) {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7667,7 +7640,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7688,7 +7661,7 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7750,7 +7723,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7784,7 +7757,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7820,7 +7793,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7943,7 +7916,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7968,7 +7941,7 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8094,7 +8067,7 @@ var inputValueTracking = {
 module.exports = inputValueTracking;
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8148,7 +8121,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8176,7 +8149,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8231,7 +8204,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8261,7 +8234,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8419,7 +8392,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8658,7 +8631,7 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8678,7 +8651,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8882,7 +8855,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8900,8 +8873,8 @@ var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
 var ReactCompositeComponent = __webpack_require__(142);
-var ReactEmptyComponent = __webpack_require__(77);
-var ReactHostComponent = __webpack_require__(78);
+var ReactEmptyComponent = __webpack_require__(76);
+var ReactHostComponent = __webpack_require__(77);
 
 var getNextDebugID = __webpack_require__(145);
 var invariant = __webpack_require__(1);
@@ -9015,7 +8988,7 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9059,7 +9032,7 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9092,7 +9065,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9164,7 +9137,7 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9344,7 +9317,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9425,7 +9398,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9442,8 +9415,8 @@ module.exports = EventListener;
 var ReactDOMSelection = __webpack_require__(159);
 
 var containsNode = __webpack_require__(161);
-var focusNode = __webpack_require__(70);
-var getActiveElement = __webpack_require__(82);
+var focusNode = __webpack_require__(69);
+var getActiveElement = __webpack_require__(81);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -9551,7 +9524,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9593,7 +9566,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9617,7 +9590,7 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMContainerInfo = __webpack_require__(176);
 var ReactDOMFeatureFlags = __webpack_require__(177);
-var ReactFeatureFlags = __webpack_require__(65);
+var ReactFeatureFlags = __webpack_require__(64);
 var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactMarkupChecksum = __webpack_require__(178);
@@ -9626,7 +9599,7 @@ var ReactUpdateQueue = __webpack_require__(48);
 var ReactUpdates = __webpack_require__(11);
 
 var emptyObject = __webpack_require__(26);
-var instantiateReactComponent = __webpack_require__(75);
+var instantiateReactComponent = __webpack_require__(74);
 var invariant = __webpack_require__(1);
 var setInnerHTML = __webpack_require__(30);
 var shouldUpdateReactComponent = __webpack_require__(46);
@@ -10135,7 +10108,7 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10149,7 +10122,7 @@ module.exports = ReactMount;
 
 
 
-var ReactNodeTypes = __webpack_require__(76);
+var ReactNodeTypes = __webpack_require__(75);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -10166,6 +10139,33 @@ function getHostComponentFromComposite(inst) {
 }
 
 module.exports = getHostComponentFromComposite;
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(12);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(100);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Search = __webpack_require__(186);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App() {
+  return _react2.default.createElement(_Search.Search, null);
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('app'));
+});
 
 /***/ }),
 /* 85 */
@@ -10495,9 +10495,9 @@ module.exports = PooledClass;
 var _prodInvariant = __webpack_require__(18);
 
 var ReactCurrentOwner = __webpack_require__(10);
-var REACT_ELEMENT_TYPE = __webpack_require__(55);
+var REACT_ELEMENT_TYPE = __webpack_require__(54);
 
-var getIteratorFn = __webpack_require__(56);
+var getIteratorFn = __webpack_require__(55);
 var invariant = __webpack_require__(1);
 var KeyEscapeUtils = __webpack_require__(88);
 var warning = __webpack_require__(2);
@@ -10743,7 +10743,7 @@ var ReactElement = __webpack_require__(15);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(57);
+  var ReactElementValidator = __webpack_require__(56);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -11050,7 +11050,7 @@ module.exports = ReactPropTypesSecret;
 var _require = __webpack_require__(15),
     isValidElement = _require.isValidElement;
 
-var factory = __webpack_require__(58);
+var factory = __webpack_require__(57);
 
 module.exports = factory(isValidElement);
 
@@ -11070,7 +11070,7 @@ module.exports = factory(isValidElement);
 
 var assign = __webpack_require__(4);
 
-var ReactPropTypesSecret = __webpack_require__(59);
+var ReactPropTypesSecret = __webpack_require__(58);
 var checkPropTypes = __webpack_require__(95);
 
 var printWarning = function() {};
@@ -11634,7 +11634,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = __webpack_require__(59);
+  var ReactPropTypesSecret = __webpack_require__(58);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -11748,13 +11748,13 @@ module.exports = '15.6.2';
 
 
 
-var _require = __webpack_require__(53),
+var _require = __webpack_require__(52),
     Component = _require.Component;
 
 var _require2 = __webpack_require__(15),
     isValidElement = _require2.isValidElement;
 
-var ReactNoopUpdateQueue = __webpack_require__(54);
+var ReactNoopUpdateQueue = __webpack_require__(53);
 var factory = __webpack_require__(98);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
@@ -12764,13 +12764,13 @@ module.exports = __webpack_require__(101);
 
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDefaultInjection = __webpack_require__(102);
-var ReactMount = __webpack_require__(83);
+var ReactMount = __webpack_require__(82);
 var ReactReconciler = __webpack_require__(19);
 var ReactUpdates = __webpack_require__(11);
 var ReactVersion = __webpack_require__(180);
 
 var findDOMNode = __webpack_require__(181);
-var getHostComponentFromComposite = __webpack_require__(84);
+var getHostComponentFromComposite = __webpack_require__(83);
 var renderSubtreeIntoContainer = __webpack_require__(182);
 var warning = __webpack_require__(2);
 
@@ -13432,7 +13432,7 @@ var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(16);
 
-var getTextContentAccessor = __webpack_require__(63);
+var getTextContentAccessor = __webpack_require__(62);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -13612,10 +13612,10 @@ var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
 var SyntheticEvent = __webpack_require__(13);
 
-var inputValueTracking = __webpack_require__(66);
+var inputValueTracking = __webpack_require__(65);
 var getEventTarget = __webpack_require__(37);
 var isEventSupported = __webpack_require__(38);
-var isTextInputElement = __webpack_require__(67);
+var isTextInputElement = __webpack_require__(66);
 
 var eventTypes = {
   change: {
@@ -15430,15 +15430,15 @@ var CSSPropertyOperations = __webpack_require__(127);
 var DOMLazyTree = __webpack_require__(20);
 var DOMNamespaces = __webpack_require__(41);
 var DOMProperty = __webpack_require__(14);
-var DOMPropertyOperations = __webpack_require__(72);
+var DOMPropertyOperations = __webpack_require__(71);
 var EventPluginHub = __webpack_require__(22);
 var EventPluginRegistry = __webpack_require__(27);
 var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactDOMComponentFlags = __webpack_require__(60);
+var ReactDOMComponentFlags = __webpack_require__(59);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactDOMInput = __webpack_require__(137);
 var ReactDOMOption = __webpack_require__(138);
-var ReactDOMSelect = __webpack_require__(74);
+var ReactDOMSelect = __webpack_require__(73);
 var ReactDOMTextarea = __webpack_require__(139);
 var ReactInstrumentation = __webpack_require__(8);
 var ReactMultiChild = __webpack_require__(140);
@@ -15449,7 +15449,7 @@ var escapeTextContentForBrowser = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(38);
 var shallowEqual = __webpack_require__(45);
-var inputValueTracking = __webpack_require__(66);
+var inputValueTracking = __webpack_require__(65);
 var validateDOMNesting = __webpack_require__(49);
 var warning = __webpack_require__(2);
 
@@ -16440,7 +16440,7 @@ module.exports = ReactDOMComponent;
 
 var ReactDOMComponentTree = __webpack_require__(5);
 
-var focusNode = __webpack_require__(70);
+var focusNode = __webpack_require__(69);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -16465,7 +16465,7 @@ module.exports = AutoFocusUtils;
 
 
 
-var CSSProperty = __webpack_require__(71);
+var CSSProperty = __webpack_require__(70);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(8);
 
@@ -16762,7 +16762,7 @@ module.exports = camelize;
 
 
 
-var CSSProperty = __webpack_require__(71);
+var CSSProperty = __webpack_require__(70);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -17127,7 +17127,7 @@ module.exports = getVendorPrefixedEventName;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMPropertyOperations = __webpack_require__(72);
+var DOMPropertyOperations = __webpack_require__(71);
 var LinkedValueUtils = __webpack_require__(43);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactUpdates = __webpack_require__(11);
@@ -17419,7 +17419,7 @@ var _assign = __webpack_require__(4);
 
 var React = __webpack_require__(17);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactDOMSelect = __webpack_require__(74);
+var ReactDOMSelect = __webpack_require__(73);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -18157,10 +18157,10 @@ module.exports = ReactMultiChild;
 
 var ReactReconciler = __webpack_require__(19);
 
-var instantiateReactComponent = __webpack_require__(75);
+var instantiateReactComponent = __webpack_require__(74);
 var KeyEscapeUtils = __webpack_require__(47);
 var shouldUpdateReactComponent = __webpack_require__(46);
-var traverseAllChildren = __webpack_require__(79);
+var traverseAllChildren = __webpack_require__(78);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -18321,7 +18321,7 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactErrorUtils = __webpack_require__(36);
 var ReactInstanceMap = __webpack_require__(24);
 var ReactInstrumentation = __webpack_require__(8);
-var ReactNodeTypes = __webpack_require__(76);
+var ReactNodeTypes = __webpack_require__(75);
 var ReactReconciler = __webpack_require__(19);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -19219,7 +19219,7 @@ module.exports = ReactCompositeComponent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactPropTypeLocationNames = __webpack_require__(144);
-var ReactPropTypesSecret = __webpack_require__(73);
+var ReactPropTypesSecret = __webpack_require__(72);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -19429,7 +19429,7 @@ module.exports = getIteratorFn;
 
 
 var KeyEscapeUtils = __webpack_require__(47);
-var traverseAllChildren = __webpack_require__(79);
+var traverseAllChildren = __webpack_require__(78);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -20186,7 +20186,7 @@ module.exports = ReactDefaultBatchingStrategy;
 
 var _assign = __webpack_require__(4);
 
-var EventListener = __webpack_require__(80);
+var EventListener = __webpack_require__(79);
 var ExecutionEnvironment = __webpack_require__(6);
 var PooledClass = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(5);
@@ -20388,9 +20388,9 @@ var DOMProperty = __webpack_require__(14);
 var EventPluginHub = __webpack_require__(22);
 var EventPluginUtils = __webpack_require__(35);
 var ReactComponentEnvironment = __webpack_require__(44);
-var ReactEmptyComponent = __webpack_require__(77);
+var ReactEmptyComponent = __webpack_require__(76);
 var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactHostComponent = __webpack_require__(78);
+var ReactHostComponent = __webpack_require__(77);
 var ReactUpdates = __webpack_require__(11);
 
 var ReactInjection = {
@@ -20423,10 +20423,10 @@ module.exports = ReactInjection;
 
 var _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(64);
+var CallbackQueue = __webpack_require__(63);
 var PooledClass = __webpack_require__(16);
 var ReactBrowserEventEmitter = __webpack_require__(32);
-var ReactInputSelection = __webpack_require__(81);
+var ReactInputSelection = __webpack_require__(80);
 var ReactInstrumentation = __webpack_require__(8);
 var Transaction = __webpack_require__(28);
 var ReactUpdateQueue = __webpack_require__(48);
@@ -20606,7 +20606,7 @@ module.exports = ReactReconcileTransaction;
 var ExecutionEnvironment = __webpack_require__(6);
 
 var getNodeForCharacterOffset = __webpack_require__(160);
-var getTextContentAccessor = __webpack_require__(63);
+var getTextContentAccessor = __webpack_require__(62);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -21302,11 +21302,11 @@ module.exports = SVGDOMPropertyConfig;
 var EventPropagators = __webpack_require__(21);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactDOMComponentTree = __webpack_require__(5);
-var ReactInputSelection = __webpack_require__(81);
+var ReactInputSelection = __webpack_require__(80);
 var SyntheticEvent = __webpack_require__(13);
 
-var getActiveElement = __webpack_require__(82);
-var isTextInputElement = __webpack_require__(67);
+var getActiveElement = __webpack_require__(81);
+var isTextInputElement = __webpack_require__(66);
 var shallowEqual = __webpack_require__(45);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
@@ -21493,7 +21493,7 @@ module.exports = SelectEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventListener = __webpack_require__(80);
+var EventListener = __webpack_require__(79);
 var EventPropagators = __webpack_require__(21);
 var ReactDOMComponentTree = __webpack_require__(5);
 var SyntheticAnimationEvent = __webpack_require__(167);
@@ -22409,7 +22409,7 @@ var ReactCurrentOwner = __webpack_require__(10);
 var ReactDOMComponentTree = __webpack_require__(5);
 var ReactInstanceMap = __webpack_require__(24);
 
-var getHostComponentFromComposite = __webpack_require__(84);
+var getHostComponentFromComposite = __webpack_require__(83);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -22467,7 +22467,7 @@ module.exports = findDOMNode;
 
 
 
-var ReactMount = __webpack_require__(83);
+var ReactMount = __webpack_require__(82);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
@@ -22867,10 +22867,6 @@ var _Tomorrow = __webpack_require__(189);
 
 var _DayAfterTomorrow = __webpack_require__(190);
 
-var _index = __webpack_require__(52);
-
-var _index2 = _interopRequireDefault(_index);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22888,7 +22884,7 @@ var DataTracker = exports.DataTracker = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (DataTracker.__proto__ || Object.getPrototypeOf(DataTracker)).call(this, props));
 
     _this.returnToMainSite = function () {
-      return _react2.default.createElement(_index2.default, null);
+      return _react2.default.createElement(App, null);
     };
 
     _this.getWeatherDataForAboutThisHour = function (weatherData, day) {
@@ -22941,13 +22937,13 @@ var DataTracker = exports.DataTracker = function (_React$Component) {
           'div',
           { className: 'container' },
           _react2.default.createElement(_Today.Today, { today: this.getWeatherDataForAboutThisHour(weatherData, 0),
-            obiekt: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 0),
+            wholeDay: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 0),
             className: 'threeDays' }),
           _react2.default.createElement(_Tomorrow.Tomorrow, { tomorrow: this.getWeatherDataForAboutThisHour(weatherData, 8),
-            obiekt: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 8),
+            wholeDay: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 8),
             className: 'threeDays' }),
           _react2.default.createElement(_DayAfterTomorrow.DayAfterTomorrow, { dayAfterTomorrow: this.getWeatherDataForAboutThisHour(weatherData, 16),
-            obiekt: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 16), className: 'threeDays' })
+            wholeDay: this.getWeatherDataForMaxMinMeanModeValues(weatherData, 16), className: 'threeDays' })
         )
       );
     }
@@ -22999,7 +22995,7 @@ var Today = exports.Today = function (_React$Component) {
     };
 
     _this.state = {
-      pickValue: ''
+      selectValue: ''
     };
     return _this;
   }
@@ -23010,25 +23006,25 @@ var Today = exports.Today = function (_React$Component) {
 
       var today = 'Today';
 
-      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mode');
 
-      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mode');
 
-      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
-      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
-      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
-      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mode');
 
       if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
@@ -23099,7 +23095,7 @@ var Tomorrow = exports.Tomorrow = function (_React$Component) {
     };
 
     _this.state = {
-      pickValue: ''
+      selectValue: ''
     };
     return _this;
   }
@@ -23110,25 +23106,25 @@ var Tomorrow = exports.Tomorrow = function (_React$Component) {
 
       var tomorrow = 'Tomorrow';
 
-      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mode');
 
-      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mode');
 
-      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
-      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
-      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
-      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mode');
 
       if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
@@ -23199,7 +23195,7 @@ var DayAfterTomorrow = exports.DayAfterTomorrow = function (_React$Component) {
     };
 
     _this.state = {
-      pickValue: ''
+      selectValue: ''
     };
     return _this;
   }
@@ -23210,25 +23206,25 @@ var DayAfterTomorrow = exports.DayAfterTomorrow = function (_React$Component) {
 
       var dayAfterTomorrow = 'Day After Tomorrow';
 
-      var minWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'min');
-      var maxWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'max');
-      var meanWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mean');
-      var modeWindSpeed = (0, _Methods.filterWind)(this.props.obiekt, 'mode');
+      var minWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'min');
+      var maxWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'max');
+      var meanWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mean');
+      var modeWindSpeed = (0, _Methods.filterWind)(this.props.wholeDay, 'mode');
 
-      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'min');
-      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'max');
-      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mean');
-      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.obiekt, 'mode');
+      var minTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'min');
+      var maxTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'max');
+      var meanTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mean');
+      var modeTemperatureValue = (0, _Methods.filterTemperature)(this.props.wholeDay, 'mode');
 
-      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'min');
-      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'max');
-      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mean');
-      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.obiekt, 'mode');
+      var minHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'min');
+      var maxHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'max');
+      var meanHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mean');
+      var modeHumidityValue = (0, _Methods.filterHumidity)(this.props.wholeDay, 'mode');
 
-      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'min');
-      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'max');
-      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mean');
-      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.obiekt, 'mode');
+      var minCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'min');
+      var maxCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'max');
+      var meanCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mean');
+      var modeCloudinessValue = (0, _Methods.filterClouds)(this.props.wholeDay, 'mode');
 
       if (this.state.selectValue === 'max') {
         return _react2.default.createElement(_DayTemplate.DayTemplate, { temperatureValue: maxTemperatureValue, humidityValue: maxHumidityValue, windSpeed: maxWindSpeed,
@@ -23282,8 +23278,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// import App from './index.jsx';
 
 var NoSuchCity = exports.NoSuchCity = function (_React$Component) {
   _inherits(NoSuchCity, _React$Component);

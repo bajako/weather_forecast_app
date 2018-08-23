@@ -7,7 +7,7 @@ export class DayAfterTomorrow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pickValue: '',
+      selectValue: '',
     }
   }
 
@@ -20,25 +20,25 @@ export class DayAfterTomorrow extends React.Component {
 
     const dayAfterTomorrow = 'Day After Tomorrow';
 
-    const minWindSpeed = filterWind(this.props.obiekt, 'min');
-    const maxWindSpeed = filterWind(this.props.obiekt, 'max');
-    const meanWindSpeed = filterWind(this.props.obiekt, 'mean');
-    const modeWindSpeed = filterWind(this.props.obiekt, 'mode');
+    const minWindSpeed = filterWind(this.props.wholeDay, 'min');
+    const maxWindSpeed = filterWind(this.props.wholeDay, 'max');
+    const meanWindSpeed = filterWind(this.props.wholeDay, 'mean');
+    const modeWindSpeed = filterWind(this.props.wholeDay, 'mode');
 
-    const minTemperatureValue = filterTemperature(this.props.obiekt, 'min');
-    const maxTemperatureValue = filterTemperature(this.props.obiekt, 'max');
-    const meanTemperatureValue = filterTemperature(this.props.obiekt, 'mean');
-    const modeTemperatureValue = filterTemperature(this.props.obiekt, 'mode');
+    const minTemperatureValue = filterTemperature(this.props.wholeDay, 'min');
+    const maxTemperatureValue = filterTemperature(this.props.wholeDay, 'max');
+    const meanTemperatureValue = filterTemperature(this.props.wholeDay, 'mean');
+    const modeTemperatureValue = filterTemperature(this.props.wholeDay, 'mode');
 
-    const minHumidityValue = filterHumidity(this.props.obiekt, 'min');
-    const maxHumidityValue = filterHumidity(this.props.obiekt, 'max');
-    const meanHumidityValue = filterHumidity(this.props.obiekt, 'mean');
-    const modeHumidityValue = filterHumidity(this.props.obiekt, 'mode');
+    const minHumidityValue = filterHumidity(this.props.wholeDay, 'min');
+    const maxHumidityValue = filterHumidity(this.props.wholeDay, 'max');
+    const meanHumidityValue = filterHumidity(this.props.wholeDay, 'mean');
+    const modeHumidityValue = filterHumidity(this.props.wholeDay, 'mode');
 
-    const minCloudinessValue = filterClouds(this.props.obiekt, 'min');
-    const maxCloudinessValue = filterClouds(this.props.obiekt, 'max');
-    const meanCloudinessValue = filterClouds(this.props.obiekt, 'mean');
-    const modeCloudinessValue = filterClouds(this.props.obiekt, 'mode');
+    const minCloudinessValue = filterClouds(this.props.wholeDay, 'min');
+    const maxCloudinessValue = filterClouds(this.props.wholeDay, 'max');
+    const meanCloudinessValue = filterClouds(this.props.wholeDay, 'mean');
+    const modeCloudinessValue = filterClouds(this.props.wholeDay, 'mode');
 
 
     if (this.state.selectValue === 'max') {
