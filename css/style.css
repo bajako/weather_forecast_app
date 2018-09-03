@@ -1,115 +1,114 @@
-
 body {
-    margin: 0 auto;
-    background: #eafee3;
+  margin: 0 auto;
+  background: #eafee3;
 }
 
 input {
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: lightgray;
-    width: 300px;
-    font-family: 'Nunito', sans-serif;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: lightgray;
+  width: 300px;
+  font-family: 'Nunito', sans-serif;
 }
 
-input[placeholder]{
-    color: #59803d
+input[placeholder] {
+  color: #59803d;
 }
 
 input[type=submit] {
-    background-color: #59803d;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #59803d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #374f26;
+  background-color: #374f26;
 }
 
-select{
-    padding: 10px 15px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: black;
-    background-color: lightgray;
-    width: 300px;
+select {
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: black;
+  background-color: lightgray;
+  width: 300px;
 }
 
-.cityName{
-    font-size: 120px;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #59803d;
+.city-name {
+  font-size: 120px;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #59803d;
 }
 
-.container{
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
+.container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
 }
 
-.nameOfDay{
-    font-size: 30px;
-    font-family: 'Nunito', sans-serif;
+.name-of-the-day {
+  font-size: 30px;
+  font-family: 'Nunito', sans-serif;
 }
 
-.newQuery{
-    font-size: 20px;
-    font-family: 'Nunito', sans-serif;
+.new-query {
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 
-.newQueryForm {
-    margin-left: 900px;
-    margin-top: 30px;
+.new-query-form {
+  margin-left: 900px;
+  margin-top: 30px;
 }
 
-.noSuchCity {
-    font-size: 40px;
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 70px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #59803d;
+.no-such-city {
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 70px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #59803d;
 }
 
-.searchLook {
-    width: 600px;
-    height: 200px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    font-family: 'Nunito', sans-serif;
+.search-box {
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  font-family: 'Nunito', sans-serif;
 }
 
-.threeDays {
-    display: flex;
-    flex-direction: column;
+.three-days {
+  display: flex;
+  flex-direction: column;
 }
 
-.underline{
-    width:900px;
-    height: 5px;
-    background: black;
-    margin:0 auto
+.underline {
+  width: 900px;
+  height: 5px;
+  background: black;
+  margin: 0 auto;
 }
 
-.weatherValues{
-    font-family: 'Nunito', sans-serif;
-    margin-top: 4px;
+.weather-values {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 4px;
 }
