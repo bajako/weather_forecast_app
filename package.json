@@ -1,7 +1,7 @@
 {
   "name": "weather_forecast_application",
   "version": "1.0.0",
-  "description": "Weather Forecast App ",
+  "description": "Weather Forecast App",
   "bugs": {
     "url": "https://github.com/bajako/weather_forecast_app/issues",
     "email": "ba.jakoniuk@gmail.com"
@@ -21,15 +21,23 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "webpack": "^3.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1"
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "stylelint-config-standard": "^18.2.0"
   }
 }

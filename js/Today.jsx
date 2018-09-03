@@ -1,23 +1,24 @@
 import React from 'react';
-import {filterWind, filterTemperature, filterHumidity, filterClouds} from './Methods.jsx';
-import {DayTemplate} from './DayTemplate.jsx';
+import {
+  filterWind, filterTemperature, filterHumidity, filterClouds,
+} from './Methods.jsx';
+import DayTemplate from './DayTemplate.jsx';
 
 
-export class Today extends React.Component {
+export default class Today extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectValue: '',
-    }
+    };
   }
 
   setStateWithDataFromChild = (dataFromChild) => {
-    this.setState({selectValue: dataFromChild});
+    this.setState({ selectValue: dataFromChild });
   };
 
 
   render() {
-
     const today = 'Today';
 
     const minWindSpeed = filterWind(this.props.wholeDay, 'min');
@@ -45,36 +46,36 @@ export class Today extends React.Component {
         <DayTemplate temperatureValue={maxTemperatureValue} humidityValue={maxHumidityValue} windSpeed={maxWindSpeed}
                      cloudinessValue={maxCloudinessValue} thisDay={today}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
-      )
+      );
     }
-    else if (this.state.selectValue === 'min') {
+    if (this.state.selectValue === 'min') {
       return (
         <DayTemplate temperatureValue={minTemperatureValue} humidityValue={minHumidityValue} windSpeed={minWindSpeed}
                      cloudinessValue={minCloudinessValue} thisDay={today}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
-      )
+      );
     }
-    else if (this.state.selectValue === 'mean') {
+    if (this.state.selectValue === 'mean') {
       return (
         <DayTemplate temperatureValue={meanTemperatureValue} humidityValue={meanHumidityValue} windSpeed={meanWindSpeed}
                      cloudinessValue={meanCloudinessValue} thisDay={today}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
-      )
+      );
     }
-    else if (this.state.selectValue === 'mode') {
+    if (this.state.selectValue === 'mode') {
       return (
         <DayTemplate temperatureValue={modeTemperatureValue} humidityValue={modeHumidityValue} windSpeed={modeWindSpeed}
                      cloudinessValue={modeCloudinessValue} thisDay={today}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
-      )
+      );
     }
     return (
       <DayTemplate temperatureValue={this.props.today} humidityValue={this.props.today} windSpeed={this.props.today}
                    cloudinessValue={this.props.today} thisDay={today}
                    setStateWithDataFromChild={this.setStateWithDataFromChild}/>
-    )
+    );
   }
 }

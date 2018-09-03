@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const temperature = (receivedWeatherData) => {
-  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
-
+  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'object')) {
+    /** @namespace receivedWeatherData.main.temp */
     return (
       <div>
         <div>Temperature</div>
@@ -10,7 +10,7 @@ export const temperature = (receivedWeatherData) => {
       </div>
     );
   }
-  else if (typeof receivedWeatherData === 'string') {
+  if (typeof receivedWeatherData === 'string') {
     return (
       <div>
         <div>Temperature</div>
@@ -18,27 +18,25 @@ export const temperature = (receivedWeatherData) => {
       </div>
     );
   }
-  else if (receivedWeatherData !== undefined) {
-    return (
+
+  return (
       <div>
         <div>Temperature</div>
         <div><strong>{receivedWeatherData}&#0176;C</strong></div>
       </div>
-    );
-  }
+  );
 };
 
 export const humidity = (receivedWeatherData) => {
-  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
-
+  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'object')) {
     return (
       <div>
         <div>Humidity</div>
         <div><strong>{Math.round(receivedWeatherData.main.humidity * 10) / 10}%</strong></div>
       </div>
-    )
+    );
   }
-  else if (typeof receivedWeatherData === 'string') {
+  if (typeof receivedWeatherData === 'string') {
     return (
       <div>
         <div>Humidity</div>
@@ -46,27 +44,25 @@ export const humidity = (receivedWeatherData) => {
       </div>
     );
   }
-  else if (receivedWeatherData !== undefined) {
-    return (
+
+  return (
       <div>
         <div>Humidity</div>
         <div><strong>{receivedWeatherData}%</strong></div>
       </div>
-    );
-  }
+  );
 };
 
 export const wind = (receivedWeatherData) => {
-  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
-
+  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'object')) {
     return (
       <div>
         <div>Wind speed</div>
         <div><strong>{Math.round(receivedWeatherData.wind.speed * 10) / 10} meter/sec</strong></div>
       </div>
-    )
+    );
   }
-  else if (typeof receivedWeatherData === 'string') {
+  if (typeof receivedWeatherData === 'string') {
     return (
       <div>
         <div>Wind speed</div>
@@ -74,7 +70,7 @@ export const wind = (receivedWeatherData) => {
       </div>
     );
   }
-  else if (receivedWeatherData !== undefined) {
+  if (receivedWeatherData !== undefined) {
     return (
       <div>
         <div>Wind speed</div>
@@ -85,16 +81,15 @@ export const wind = (receivedWeatherData) => {
 };
 
 export const clouds = (receivedWeatherData) => {
-  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === "object")) {
-
+  if (receivedWeatherData !== undefined && (typeof receivedWeatherData === 'object')) {
     return (
       <div>
         <div>Cloudiness</div>
         <div><strong>{Math.round(receivedWeatherData.clouds.all * 10) / 10}%</strong></div>
       </div>
-    )
+    );
   }
-  else if (typeof receivedWeatherData === 'string') {
+  if (typeof receivedWeatherData === 'string') {
     return (
       <div>
         <div>Cloudiness</div>
@@ -102,7 +97,7 @@ export const clouds = (receivedWeatherData) => {
       </div>
     );
   }
-  else if (receivedWeatherData !== undefined) {
+  if (receivedWeatherData !== undefined) {
     return (
       <div>
         <div>Cloudiness</div>
@@ -114,10 +109,9 @@ export const clouds = (receivedWeatherData) => {
 
 export const filterWind = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
-
     const windSpeed = [];
 
-    weatherDataForMaxMinMeanModeValues.forEach(function (element) {
+    weatherDataForMaxMinMeanModeValues.forEach((element) => {
       windSpeed.push(element.wind.speed);
     });
 
@@ -125,11 +119,11 @@ export const filterWind = (weatherDataForMaxMinMeanModeValues, value) => {
 
     if (value === 'max') {
       return showMax(windSpeed);
-    } else if (value === 'min') {
+    } if (value === 'min') {
       return showMin(windSpeed);
-    } else if (value === 'mean') {
+    } if (value === 'mean') {
       return showMean(windSpeed);
-    } else if (value === 'mode') {
+    } if (value === 'mode') {
       return showMode(windSpeed);
     }
   }
@@ -138,10 +132,9 @@ export const filterWind = (weatherDataForMaxMinMeanModeValues, value) => {
 
 export const filterTemperature = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
-
     const temperature = [];
 
-    weatherDataForMaxMinMeanModeValues.forEach(function (element) {
+    weatherDataForMaxMinMeanModeValues.forEach((element) => {
       temperature.push(element.main.temp);
     });
 
@@ -149,11 +142,11 @@ export const filterTemperature = (weatherDataForMaxMinMeanModeValues, value) => 
 
     if (value === 'max') {
       return showMax(temperature);
-    } else if (value === 'min') {
+    } if (value === 'min') {
       return showMin(temperature);
-    } else if (value === 'mean') {
+    } if (value === 'mean') {
       return showMean(temperature);
-    } else if (value === 'mode') {
+    } if (value === 'mode') {
       return showMode(temperature);
     }
   }
@@ -161,10 +154,9 @@ export const filterTemperature = (weatherDataForMaxMinMeanModeValues, value) => 
 
 export const filterHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
-
     const humidity = [];
 
-    weatherDataForMaxMinMeanModeValues.forEach(function (element) {
+    weatherDataForMaxMinMeanModeValues.forEach((element) => {
       humidity.push(element.main.humidity);
     });
 
@@ -172,11 +164,11 @@ export const filterHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
 
     if (value === 'max') {
       return showMax(humidity);
-    } else if (value === 'min') {
+    } if (value === 'min') {
       return showMin(humidity);
-    } else if (value === 'mean') {
+    } if (value === 'mean') {
       return showMean(humidity);
-    } else if (value === 'mode') {
+    } if (value === 'mode') {
       return showMode(humidity);
     }
   }
@@ -184,10 +176,9 @@ export const filterHumidity = (weatherDataForMaxMinMeanModeValues, value) => {
 
 export const filterClouds = (weatherDataForMaxMinMeanModeValues, value) => {
   if (Array.isArray(weatherDataForMaxMinMeanModeValues)) {
-
     const cloudiness = [];
 
-    weatherDataForMaxMinMeanModeValues.forEach(function (element) {
+    weatherDataForMaxMinMeanModeValues.forEach((element) => {
       cloudiness.push(element.clouds.all);
     });
 
@@ -195,11 +186,11 @@ export const filterClouds = (weatherDataForMaxMinMeanModeValues, value) => {
 
     if (value === 'max') {
       return showMax(cloudiness);
-    } else if (value === 'min') {
+    } if (value === 'min') {
       return showMin(cloudiness);
-    } else if (value === 'mean') {
+    } if (value === 'mean') {
       return showMean(cloudiness);
-    } else if (value === 'mode') {
+    } if (value === 'mode') {
       return showMode(cloudiness);
     }
   }
@@ -207,29 +198,26 @@ export const filterClouds = (weatherDataForMaxMinMeanModeValues, value) => {
 
 export const showMax = (weatherDataFromWholeDay) => {
   if (weatherDataFromWholeDay.length <= 1) {
-    return Math.round(weatherDataFromWholeDay[0] * 10) / 10
+    return Math.round(weatherDataFromWholeDay[0] * 10) / 10;
   }
-  else {
-    return Math.round(weatherDataFromWholeDay[0] * 10) / 10
-  }
+
+  return Math.round(weatherDataFromWholeDay[0] * 10) / 10;
 };
 
 export const showMin = (weatherDataFromWholeDay) => {
   if (weatherDataFromWholeDay.length <= 1) {
-    return Math.round(weatherDataFromWholeDay[0] * 10) / 10
+    return Math.round(weatherDataFromWholeDay[0] * 10) / 10;
   }
-  else {
-    return Math.round(weatherDataFromWholeDay[weatherDataFromWholeDay.length - 1] * 10) / 10
-  }
+
+  return Math.round(weatherDataFromWholeDay[weatherDataFromWholeDay.length - 1] * 10) / 10;
 };
 
 export const showMean = (weatherDataFromWholeDay) => {
   if (weatherDataFromWholeDay.length <= 1) {
-    return Math.round(weatherDataFromWholeDay[0] * 10) / 10
+    return Math.round(weatherDataFromWholeDay[0] * 10) / 10;
   }
-  else {
-    return parseFloat((weatherDataFromWholeDay.reduce((a, b) => a + b)/weatherDataFromWholeDay.length).toFixed(2))
-  }
+
+  return parseFloat((weatherDataFromWholeDay.reduce((a, b) => a + b) / weatherDataFromWholeDay.length).toFixed(2));
 };
 
 export const showMode = (weatherDataFromWholeDay) => {
@@ -238,7 +226,7 @@ export const showMode = (weatherDataFromWholeDay) => {
   const frequency = {};
   let max = 0;
   let result = 0;
-  for (let v in roundedData) {
+  for (const v in roundedData) {
     frequency[roundedData[v]] = (frequency[roundedData[v]] || 0) + 1;
     if (frequency[roundedData[v]] > max) {
       max = frequency[roundedData[v]];
@@ -246,8 +234,7 @@ export const showMode = (weatherDataFromWholeDay) => {
     }
   }
   if (max > 1) {
-    return result
-  } else {
-    return message
+    return result;
   }
+  return message;
 };
