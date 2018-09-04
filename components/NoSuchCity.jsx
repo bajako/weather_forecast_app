@@ -1,8 +1,10 @@
 import React from 'react';
 import App from './Index.jsx';
 
+
 export default class NoSuchCity extends React.Component {
   returnToMainSite = () => <App/>;
+
 
   render() {
     return (

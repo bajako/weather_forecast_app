@@ -2,11 +2,12 @@ import React from 'react';
 import DataTracker from './DataTracker.jsx';
 import NoSuchCity from './NoSuchCity.jsx';
 
+
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      weatherData: '',
+      weatherData: null,
       query: null,
       error: false,
     };

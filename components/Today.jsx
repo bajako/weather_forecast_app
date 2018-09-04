@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   filterWind, filterTemperature, filterHumidity, filterClouds,
 } from './Methods.jsx';
@@ -79,3 +80,8 @@ export default class Today extends React.Component {
     );
   }
 }
+
+Today.propTypes = {
+  wholeDay: PropTypes.array,
+  today: PropTypes.object,
+};

@@ -1,6 +1,6 @@
 module.exports = {
-  entry: "./js/Index.jsx",
-  output: { filename: "./js/out.js" },
+  entry: "./components/Index.jsx",
+  output: { filename: "./components/out.js" },
   watch: true,
   module: {
     loaders: [{
@@ -12,23 +12,3 @@ module.exports = {
     ],
   },
 };
-
-// module: {
-//   rules: [
-//     {
-//       test: /\.(js|jsx)$/,
-//       exclude: /node_modules/,
-//       use: [{
-//         loader: 'babel-loader',
-//         options:	{	presets:	['env', 'stage-2', 'react']	},
-//       }],
-//
-//     },
-//     {
-//       test: /\.js$/,
-//       exclude: /node_modules/,
-//       use: ['babel-loader', 'eslint-loader'],
-//     },
-//   ],
-// },
-// };

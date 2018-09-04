@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   filterWind, filterTemperature, filterHumidity, filterClouds,
 } from './Methods.jsx';
 import DayTemplate from './DayTemplate.jsx';
 
 
-export default class DayAfterTomorrow extends React.Component {
+export default class Tomorrow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +20,7 @@ export default class DayAfterTomorrow extends React.Component {
 
 
   render() {
-    const dayAfterTomorrow = 'Day After Tomorrow';
+    const tomorrow = 'Tomorrow';
 
     const minWindSpeed = filterWind(this.props.wholeDay, 'min');
     const maxWindSpeed = filterWind(this.props.wholeDay, 'max');
@@ -45,7 +46,7 @@ export default class DayAfterTomorrow extends React.Component {
     if (this.state.selectValue === 'max') {
       return (
         <DayTemplate temperatureValue={maxTemperatureValue} humidityValue={maxHumidityValue} windSpeed={maxWindSpeed}
-                     cloudinessValue={maxCloudinessValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={maxCloudinessValue} thisDay={tomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       );
@@ -53,7 +54,7 @@ export default class DayAfterTomorrow extends React.Component {
     if (this.state.selectValue === 'min') {
       return (
         <DayTemplate temperatureValue={minTemperatureValue} humidityValue={minHumidityValue} windSpeed={minWindSpeed}
-                     cloudinessValue={minCloudinessValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={minCloudinessValue} thisDay={tomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       );
@@ -61,7 +62,7 @@ export default class DayAfterTomorrow extends React.Component {
     if (this.state.selectValue === 'mean') {
       return (
         <DayTemplate temperatureValue={meanTemperatureValue} humidityValue={meanHumidityValue} windSpeed={meanWindSpeed}
-                     cloudinessValue={meanCloudinessValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={meanCloudinessValue} thisDay={tomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       );
@@ -69,16 +70,20 @@ export default class DayAfterTomorrow extends React.Component {
     if (this.state.selectValue === 'mode') {
       return (
         <DayTemplate temperatureValue={modeTemperatureValue} humidityValue={modeHumidityValue} windSpeed={modeWindSpeed}
-                     cloudinessValue={modeCloudinessValue} thisDay={dayAfterTomorrow}
+                     cloudinessValue={modeCloudinessValue} thisDay={tomorrow}
                      setStateWithDataFromChild={this.setStateWithDataFromChild}/>
 
       );
     }
     return (
-      <DayTemplate temperatureValue={this.props.dayAfterTomorrow} humidityValue={this.props.dayAfterTomorrow}
-                   windSpeed={this.props.dayAfterTomorrow} cloudinessValue={this.props.dayAfterTomorrow}
-                   thisDay={dayAfterTomorrow}
+      <DayTemplate temperatureValue={this.props.tomorrow} humidityValue={this.props.tomorrow}
+                   windSpeed={this.props.tomorrow} cloudinessValue={this.props.tomorrow} thisDay={tomorrow}
                    setStateWithDataFromChild={this.setStateWithDataFromChild}/>
     );
   }
 }
+
+Tomorrow.propTypes = {
+  wholeDay: PropTypes.array,
+  tomorrow: PropTypes.object,
+};

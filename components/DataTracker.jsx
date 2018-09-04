@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Today from './Today.jsx';
 import Tomorrow from './Tomorrow.jsx';
 import DayAfterTomorrow from './DayAfterTomorrow.jsx';
 import App from './Index.jsx';
+
 
 export default class DataTracker extends React.Component {
   returnToMainSite = () => <App/>;
@@ -23,8 +25,6 @@ export default class DataTracker extends React.Component {
 
 
   render() {
-    const weatherData = this.props.weatherData;
-
     return (
       <div>
         <form onSubmit={this.returnToMainSite} className="new-query-form">
@@ -33,16 +33,21 @@ export default class DataTracker extends React.Component {
         <div className="city-name">{this.props.cityName}</div>
         <div className="underline"> </div>
         <div className="container">
-          <Today today={this.getWeatherDataForAboutThisHour(weatherData, 0)}
-                 wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 0)}
+          <Today today={this.getWeatherDataForAboutThisHour(this.props.weatherData, 0)}
+                 wholeDay={this.getWeatherDataForMaxMinMeanModeValues(this.props.weatherData, 0)}
                  className="three-days"/>
-          <Tomorrow tomorrow={this.getWeatherDataForAboutThisHour(weatherData, 8)}
-                    wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 8)}
+          <Tomorrow tomorrow={this.getWeatherDataForAboutThisHour(this.props.weatherData, 8)}
+                    wholeDay={this.getWeatherDataForMaxMinMeanModeValues(this.props.weatherData, 8)}
                     className="three-days"/>
-          <DayAfterTomorrow dayAfterTomorrow={this.getWeatherDataForAboutThisHour(weatherData, 16)}
-                            wholeDay={this.getWeatherDataForMaxMinMeanModeValues(weatherData, 16)} className="three-days"/>
+          <DayAfterTomorrow dayAfterTomorrow={this.getWeatherDataForAboutThisHour(this.props.weatherData, 16)}
+                            wholeDay={this.getWeatherDataForMaxMinMeanModeValues(this.props.weatherData, 16)} className="three-days"/>
         </div>
       </div>
     );
   }
 }
+
+DataTracker.propTypes = {
+  weatherData: PropTypes.array,
+  cityName: PropTypes.string,
+};

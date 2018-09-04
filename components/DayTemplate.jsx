@@ -4,6 +4,7 @@ import {
   temperature, humidity, wind, clouds,
 } from './Methods.jsx';
 
+
 export default class DayTemplate extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +23,7 @@ export default class DayTemplate extends React.Component {
   sendSelectedValueToParent = () => {
     this.props.setStateWithDataFromChild(this.state.selectValue);
   };
+
 
   render() {
     return (
